@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <title>{{template_class_name}}</title>
+</head>
+<body>
+    <header>
+        <nav class='navbar'>
+            
+                {%for class in template_class%}
+                <a href="#{{class.id}}">{{class.name}}</a>
+                {%endfor%}
+                        
+        </nav>
+    </header>
+    <main>
+        {%for class in template_class%}
+        <section>
+            
+            <article id="{{ class.id }}">
+                <h2>{{class.name}}</h2>
+                <p>{{ class.description }} </p>
+                <ul>
+                    <li>Race - {{class.race}}</li>
+                    <li>Armor - {{class.armor}}</li>
+                    <li>Weapon - {{class.weapon}}</li>
+                    <li>Role - {{class.role}}</li>
+                </ul>
+            </article>
+       
+        </section>
+        {%endfor%}
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+        <!--link rel="stylesheet" type="text/css" href="../static/css/index_style.css"-->
+        <title>Lineage 2</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+            <ul>
+                <li><a href="#main">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+            </nav>
+        </header>
+        
+        <main class='position'>
+            <div id="main" class="image">
+                <div class="title">
+                    <h1>Lineage 2 The Old School</h1>
+                    <a href="#about" class="button">Start</a>
+                </div>
+            </div>
+            <section>
+                <article id="about">
+                    <h3>About Lineage 2</h3>
+                    <p>Lineage II is a massive multiplayer online role-playing game (MMORPG) for 
+                        Microsoft Windows and the second game in the Lineage series. It is a prequel 
+                        to Lineage and is set 150 years before the firstgame. It has become popular 
+                        since its October 1, 2003, launch in South Korea, reporting 1,000,918 unique 
+                        users during the month of March 2007. To date, the game has been played by more 
+                        than 14 million users, most of whom are based in Asia.
+                    </p>
+                    <p>On November 30, 2011, Lineage II adopted a free-to-play model in Lineage II:
+                         Goddess of Destruction, with all game content being free except for "purchasable 
+                         in-game store items and packs".
+                    </p>
+                  </article>
+                  <article>
+                      <h3>Gameplay</h3>
+                        <p>The first thing a player does when playing Lineage II 
+                          is to create a character. They can choose their character's race 
+                          and personalise the character's face and hair. However, the gameplay 
+                          allows many options for personalisation of the character visuals: 
+                          for example, the player can choose a hairstyle, hair colour, facial 
+                          expression, and gender among other features.
+                        </p>
+                        <p>Every player begins the game in a temple in their character's 
+                        race's zone (for example: Humans start in "Talking Island" and the Dark Elves 
+                        in "The Shilen Temple"). Most commonly, the player can choose between a mage 
+                        and a fighter in each race except Dwarves and Kamael, which can be only fighters.
+                        </p>
+                  </article>
+            </section>
+            <section id="classes">
+            <ul>
+                <!--{%for l2_class in template_l2_classes%}
+                <li><a href='/{{l2_class.classess}}'>{{ l2_class.classess }}</a></li>
+                {%endfor%}-->
+                <li><img src="../static/images/ass.jpg"><a href="Assassins">Assassin</a></li>
+                <li><img src="../static/images/bow.jpg"><a href="Archers">Archer</a></li>
+                <li><img src="../static/images/mag.jpg"><a href="Mages">Mage</a></li>
+                <li><img src="../static/images/war.jpg"><a href="Warriors">Warrior</a></li>
+            </ul>
+            </section>
+        </main>
+        <footer id="contact" class='position'>
+            <p>Made by Attonizee &copy; anatoliiv1990@gmail.com</p>
+        </footer>
+    </body>
+
+</html>

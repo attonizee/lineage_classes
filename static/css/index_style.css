@@ -1,0 +1,120 @@
+/* latin */
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v15/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWZd2GK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ded2ad;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    margin: 0;
+    padding: 10px 0;
+    
+}
+
+nav li {
+    display: inline-block;
+    width: 100px;
+    
+}
+
+nav a {
+    color: #381803;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    
+}
+
+main {
+    text-align: center;
+    
+           
+}
+
+h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+    color: #381803;
+}
+h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 28px;
+}
+
+p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 24px;
+}
+
+.position {
+    position: relative;
+    top: 60px;
+}
+.image {
+    height: 550px;
+    background-image: url('../images/lineage-2.jpg');
+    background-size: cover;
+    
+}
+
+.title {
+    margin: 0 auto;
+    text-align: left;
+    padding: 40px 0px 0 40px;
+    font-size: 24px;
+}
+
+.button {
+    border: 2px solid #381803;
+    text-transform: uppercase;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    background-color: #381803;
+    color: #ded2ad;
+}
+
+section li {
+    display: inline-block;
+    width: 100px;
+}
+
+section a {
+    text-decoration: none;
+    border: 2px solid #ded2ad;
+    background-color: #ded2ad;
+    padding: 5px 5px;
+    color: #140c07;
+        
+}
+
+section img {
+    height: 40px;
+    
+}
+    
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: #ded2ad;
+    display: inline-block;
+    text-align: center;
+}
