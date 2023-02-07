@@ -1,3 +1,5 @@
 __pycache__/
 Classes.db
 project_environment
+venv/
+instance/
