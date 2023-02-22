@@ -2,7 +2,9 @@
 
 pipeline {
     agent any
-    
+    environment {
+        customImage = ''
+    }
     stages {
          stage('Clone repository') { 
             steps { 
@@ -15,7 +17,7 @@ pipeline {
         stage('Build') { 
             steps {
                 script {
-                    def customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
+                    customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
         }
         }
         }
