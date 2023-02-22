@@ -1,14 +1,4 @@
-//Jenkinsfile (Scripted Pipeline)
-node {
-    checkout scm 
-    
-    docker.withRegistry('788660851898.dkr.ecr.us-east-1.amazonaws.com/lineage_flask', 'credentials-id') {
-
-        
-
-    }
-
-}
+//Jenkinsfile
 
 pipeline {
     agent any
