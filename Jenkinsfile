@@ -16,6 +16,7 @@ pipeline {
             script{
                def customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
         }
+        }
         stage('Test'){
             steps {
                  echo 'Empty'
