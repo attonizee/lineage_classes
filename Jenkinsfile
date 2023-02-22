@@ -6,7 +6,8 @@ pipeline {
         customImage = ''
     }
     stages {
-         stage('Clone repository') { 
+         stage('Clone repository') {
+            agent any 
             steps { 
                 script {
                 checkout scm
@@ -15,7 +16,6 @@ pipeline {
         }
 
         stage('Build') { 
- 
             agent {
                 docker {
                     image 'python:3' 
