@@ -1,7 +1,7 @@
 //Jenkinsfile
 
 pipeline {
-    agent any
+    agent none
     environment {
         customImage = ''
     }
@@ -20,6 +20,7 @@ pipeline {
                 docker {
                     image 'python:3' 
                 }
+            }
             steps {
                 script {
                     sh 'pip install wheel'
@@ -27,10 +28,10 @@ pipeline {
                     stash(name: 'lineage_app', includes: 'dist/*.whl')
 
                     //customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
+                }
+            }
         }
-        }
-        }
-        }/*
+        /*
         stage('Test'){
             steps {
                  echo 'Empty'
@@ -45,7 +46,7 @@ pipeline {
                         }
                     }*/
                 
-                }
-            }
+    }
+}
         
     
