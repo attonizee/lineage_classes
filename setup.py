@@ -8,6 +8,6 @@ setup(
     install_requires=[
         'flask',
         'Flask-SQLAlchemy',
-        'gunicorn'
+        'gunicorn',
     ],
 )
