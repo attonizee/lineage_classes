@@ -15,12 +15,22 @@ pipeline {
         }
 
         stage('Build') { 
+
+            stage('Build') { 
+            agent {
+                docker {
+                    image 'python:3' 
+                }
             steps {
                 script {
-                    customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
+                    sh 'pip install wheel'
+                    sh 'python3 setup.py bdist_wheel'
+                    stash(name: 'lineage_app', includes: 'dist/*.whl')
+
+                    //customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
         }
         }
-        }
+        }/*
         stage('Test'){
             steps {
                  echo 'Empty'
@@ -33,7 +43,7 @@ pipeline {
                         customImage.push("${env.BUILD_NUMBER}")
                         customImage.push("stage")
                         }
-                    }
+                    }*/
                 
                 }
             }
