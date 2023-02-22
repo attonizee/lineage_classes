@@ -23,11 +23,20 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'pip install wheel'
                     sh 'python3 setup.py bdist_wheel'
                     stash(name: 'lineage_app', includes: 'dist/*.whl')
 
-                    //customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
+                         
+                }
+            }
+        }
+
+        stage('Deploy to Container') {
+            agent dockerfile
+            steps {
+                script {
+                    unstash 'lineage_app'
+                    customImage = docker.build("lineage_flask:${env.BUILD_ID}")
                 }
             }
         }

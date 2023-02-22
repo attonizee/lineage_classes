@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install python3 -y && apt-get install python3-pip 
 
 
 WORKDIR /app
-COPY . .
+COPY lineage_app lineage_app
 
-RUN pip install -e .
+RUN pip install lineage_app
 
 RUN flask --app lineage_classes init-db
 
