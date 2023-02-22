@@ -15,8 +15,7 @@ pipeline {
         }
 
         stage('Build') { 
-
-            stage('Build') { 
+ 
             agent {
                 docker {
                     image 'python:3' 
@@ -28,6 +27,7 @@ pipeline {
                     stash(name: 'lineage_app', includes: 'dist/*.whl')
 
                     //customImage = docker.build("lineage_flask:${env.BUILD_ID}")     
+        }
         }
         }
         }/*
