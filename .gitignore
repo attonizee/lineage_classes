@@ -3,3 +3,7 @@ Classes.db
 project_environment
 venv/
 instance/
+*.egg-info
+dist/
+build/
+.DS_Store

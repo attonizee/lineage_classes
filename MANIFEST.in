@@ -1,0 +1,3 @@
+graft lineage_classes/static
+graft lineage_classes/templates
+global-exclude *.pyc
