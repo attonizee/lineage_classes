@@ -32,7 +32,7 @@ pipeline {
         }
 
         stage('Deploy to Container') {
-            agent {dockerfile}
+            agent any
             steps {
                 script {
                     unstash 'lineage_app'
