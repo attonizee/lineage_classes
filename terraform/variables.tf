@@ -21,15 +21,3 @@ variable "vpc_cidr_block" {
   type = string
   default = "192.168.0.0/16"
 }
-
-variable "private_subnets" {
-    description = "Describe private subnets for VPC"
-    type = string
-    default = "192.168.10.0/24"
-}
-
-variable "public_subnets" {
-  description = "Describe public subnets for VPC"
-  type = string
-  default = "192.168.20.0/24"
-}
