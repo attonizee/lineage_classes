@@ -1,4 +1,12 @@
 terraform {
+
+  backend "s3" {
+    bucket         = "lineagetfstate"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "lineagetfstatetable"
+  
+}
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -12,6 +20,8 @@ terraform {
 provider "aws" {
   region = var.amazon_region 
 }
+
+  
 
 # Create a VPC
 resource "aws_vpc" "lineage_classess_vpc" {
